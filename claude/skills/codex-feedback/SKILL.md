@@ -75,10 +75,13 @@ gh api graphql -f query='mutation {
 }'
 ```
 
-To get the thread node ID:
+To get review thread IDs (note: use `PRRT_*` thread IDs, not `PRRC_*` comment IDs):
 ```bash
-gh api "repos/{owner}/{repo}/pulls/{pr}/reviews/{review_id}/comments" \
-  --jq '.[] | {id: .id, node_id: .node_id, path: .path, body: .body[:80]}'
+gh api graphql -f query='query { repository(owner: "{owner}", name: "{repo}") {
+  pullRequest(number: {pr}) { reviewThreads(last: 20) { nodes {
+    id isResolved comments(first: 1) { nodes { body } }
+  } } }
+}' --jq '.data.repository.pullRequest.reviewThreads.nodes[] | select(.isResolved == false) | {id, body: .comments.nodes[0].body[:80]}'
 ```
 
 **Only resolve comments that were actually fixed.** Leave skipped/deferred comments unresolved for the user to handle manually.
