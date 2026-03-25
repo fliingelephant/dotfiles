@@ -31,5 +31,17 @@
       "Bash(gh repo view:*)",
       "Bash(git add:*)"
     ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd ~/dotfiles && STATUS=$(git status --porcelain) && [ -n \"$STATUS\" ] && echo '{\"systemMessage\": \"Dotfiles have uncommitted changes: '\"$(echo $STATUS | tr '\\n' ' ')\"'\"}' || echo '{\"systemMessage\": \"Dotfiles up to date.\"}'"
+          }
+        ]
+      }
+    ]
   }
 }
