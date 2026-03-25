@@ -4,6 +4,7 @@
 
 - **Discuss before editing.** When reviewing PR comments or issues, first understand the essential semantics — what can vs cannot change, what the design actually requires — before proposing any fix. Do not edit until alignment is reached.
 - **First principles only.** No legacy considerations, code fallbacks, or patch-style fixes. Understand the essential nature of the problem, then apply the most clean, simple, and logistically canonical fix. This applies to automated reviewer suggestions too — evaluate whether the current behavior is correct by design before treating a suggestion as a bug.
+- **Human in the loop.** Implementation might be incorrect. For uncertain behavior, refer to notes or ask the user rather than guessing. When in doubt, ask.
 
 ## Design Philosophy
 
