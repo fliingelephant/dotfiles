@@ -12,3 +12,4 @@
 - **Let it crash.** No defensive parameter checks at internal boundaries. Validate only at system boundaries (user input, external APIs).
 - **No helpers.** Minimize helper functions. Inline short logic; only extract when reused 3+ times.
 - **Julia-style defaults.** `def foo(x, y=10):` not `def foo(x, y=None): y = y or 10`.
+- **No trivial TDD.** Do not use TDD for example scripts, demos, or one-off experiments. TDD is for library/framework code where correctness matters and regressions are costly. Writing tests for example scripts is useless overhead.
