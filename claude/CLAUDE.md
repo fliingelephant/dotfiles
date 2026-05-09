@@ -17,3 +17,4 @@
 ## Workflow
 
 - **Run `/simplify` before feature-dev or refactor commits.** Skip for bug-fix commits. Code slimness is a top priority.
+- **Subagents match the main agent.** When launching subagents or review agents, use the same model id, reasoning/effort level, service tier, sandbox, approval policy, and tool-access settings as the main agent. Rely on default inheritance only when it preserves an exact match; otherwise pass the matching values explicitly. Do not downgrade to smaller, cheaper, lower-effort, or differently configured agents unless the user explicitly asks.
