@@ -1,27 +1,4 @@
 {
-  "enabledPlugins": {
-    "github@claude-plugins-official": true,
-    "code-review@claude-plugins-official": true,
-    "commit-commands@claude-plugins-official": true,
-    "feature-dev@claude-plugins-official": true,
-    "code-simplifier@claude-plugins-official": true,
-    "ralph-loop@claude-plugins-official": true,
-    "pr-review-toolkit@claude-plugins-official": true,
-    "claude-code-setup@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true,
-    "agentic-audit@agentic-audit": true,
-    "skill-creator@claude-plugins-official": true
-  },
-  "extraKnownMarketplaces": {
-    "agentic-audit": {
-      "source": {
-        "source": "github",
-        "repo": "fliingelephant/agentic-audit"
-      }
-    }
-  },
-  "effortLevel": "high",
-  "voiceEnabled": true,
   "permissions": {
     "allow": [
       "Bash(gh pr view:*)",
@@ -32,6 +9,7 @@
       "Bash(git add:*)"
     ]
   },
+  "model": "claude-opus-4-6[1m]",
   "hooks": {
     "SessionStart": [
       {
@@ -43,5 +21,53 @@
         ]
       }
     ]
-  }
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  },
+  "enabledPlugins": {
+    "agentic-audit@agentic-audit": true,
+    "agentic-tests@agentic-tests": true,
+    "superpowers@superpowers-dev": true,
+    "codex@openai-codex": true,
+    "harness-system@harness-system": true
+  },
+  "extraKnownMarketplaces": {
+    "agentic-audit": {
+      "source": {
+        "source": "github",
+        "repo": "fliingelephant/agentic-audit"
+      }
+    },
+    "agentic-tests": {
+      "source": {
+        "source": "github",
+        "repo": "GiggleLiu/agentic-tests"
+      }
+    },
+    "superpowers-dev": {
+      "source": {
+        "source": "github",
+        "repo": "obra/superpowers"
+      }
+    },
+    "openai-codex": {
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
+      }
+    },
+    "harness-system": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/zhou/workflow/harness-system"
+      },
+      "autoUpdate": true
+    }
+  },
+  "effortLevel": "xhigh",
+  "autoMemoryEnabled": false,
+  "autoDreamEnabled": true,
+  "voiceEnabled": true
 }
