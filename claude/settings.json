@@ -67,6 +67,7 @@
     }
   },
   "effortLevel": "xhigh",
+  "autoCompactWindow": 400000,
   "autoMemoryEnabled": false,
   "autoDreamEnabled": true,
   "voiceEnabled": true
