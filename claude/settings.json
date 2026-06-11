@@ -9,7 +9,7 @@
       "Bash(git add:*)"
     ]
   },
-  "model": "claude-opus-4-6[1m]",
+  "model": "claude-fable-5[1m]",
   "hooks": {
     "SessionStart": [
       {
@@ -29,9 +29,8 @@
   "enabledPlugins": {
     "agentic-audit@agentic-audit": true,
     "agentic-tests@agentic-tests": true,
-    "superpowers@superpowers-dev": true,
     "codex@openai-codex": true,
-    "harness-system@harness-system": true
+    "superpowers@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "agentic-audit": {
@@ -46,29 +45,18 @@
         "repo": "GiggleLiu/agentic-tests"
       }
     },
-    "superpowers-dev": {
-      "source": {
-        "source": "github",
-        "repo": "obra/superpowers"
-      }
-    },
     "openai-codex": {
       "source": {
         "source": "github",
         "repo": "openai/codex-plugin-cc"
       }
-    },
-    "harness-system": {
-      "source": {
-        "source": "directory",
-        "path": "/Users/zhou/workflow/harness-system"
-      },
-      "autoUpdate": true
     }
   },
   "effortLevel": "xhigh",
   "autoCompactWindow": 400000,
+  "tui": "fullscreen",
   "autoMemoryEnabled": false,
   "autoDreamEnabled": true,
+  "theme": "auto",
   "voiceEnabled": true
 }
