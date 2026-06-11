@@ -15,6 +15,8 @@ Run `git diff` (or `git diff HEAD` if there are staged changes) to see what chan
 
 Use the `spawn_agent` tool to launch all three agents concurrently in a single message. Pass each agent the full diff so it has the complete context.
 
+An explicit request to use this skill, including `/simplify` or a repo instruction to run `/simplify`, is explicit user authorization to launch exactly these three review agents for this workflow. Do not replace them with a local-only review because of a generic subagent permission rule.
+
 Launch each agent with the same model id, reasoning effort, service tier, sandbox, approval, and tool-access settings as the main agent. If these values are known and configurable, pass them explicitly. For example, a main agent running `gpt-5.5`, `xhigh`, `fast` must launch all three review agents with `gpt-5.5`, `xhigh`, and `fast`.
 
 ### Agent 1: Code Reuse Review
