@@ -27,10 +27,17 @@
     "command": "bash ~/.claude/statusline-command.sh"
   },
   "enabledPlugins": {
-    "agentic-audit@agentic-audit": true,
+    "agentic-audit@agentic-audit": false,
     "agentic-tests@agentic-tests": true,
     "codex@openai-codex": true,
-    "superpowers@claude-plugins-official": true
+    "superpowers@claude-plugins-official": true,
+    "ralph-loop@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "mcp-server-dev@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "agentic-audit": {
@@ -50,6 +57,12 @@
         "source": "github",
         "repo": "openai/codex-plugin-cc"
       }
+    },
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
     }
   },
   "effortLevel": "xhigh",
@@ -57,6 +70,7 @@
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
   "autoDreamEnabled": true,
+  "skipWorkflowUsageWarning": true,
   "theme": "auto",
   "voiceEnabled": true
 }
