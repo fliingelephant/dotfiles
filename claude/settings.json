@@ -30,13 +30,14 @@
     "agentic-audit@agentic-audit": false,
     "agentic-tests@agentic-tests": true,
     "codex@openai-codex": true,
-    "superpowers@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
     "github@claude-plugins-official": true,
     "mcp-server-dev@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
-    "commit-commands@claude-plugins-official": true
+    "commit-commands@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "sci-brain@sci-brain": true
   },
   "extraKnownMarketplaces": {
     "agentic-audit": {
@@ -62,13 +63,19 @@
         "source": "github",
         "repo": "anthropics/claude-plugins-official"
       }
+    },
+    "sci-brain": {
+      "source": {
+        "source": "github",
+        "repo": "QuantumBFS/sci-brain"
+      }
     }
   },
   "effortLevel": "xhigh",
   "autoCompactWindow": 400000,
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
-  "autoDreamEnabled": true,
+  "autoDreamEnabled": false,
   "skipWorkflowUsageWarning": true,
   "theme": "auto",
   "voiceEnabled": true
