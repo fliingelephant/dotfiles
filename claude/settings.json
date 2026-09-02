@@ -9,7 +9,7 @@
       "Bash(git add:*)"
     ]
   },
-  "model": "claude-fable-5-1",
+  "model": "claude-fable-5-1[1m]",
   "hooks": {
     "SessionStart": [
       {
@@ -73,11 +73,21 @@
   },
   "outputStyle": "Concise",
   "effortLevel": "xhigh",
+  "modelSettings": {
+    "claude-fable-5-1": {
+      "effortLevel": "medium"
+    }
+  },
   "autoCompactWindow": 400000,
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
   "autoDreamEnabled": false,
   "skipWorkflowUsageWarning": true,
   "theme": "auto",
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "cleanupPeriodDays": 3650,
+  "env": {
+    "DISABLE_TELEMETRY": "1",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  }
 }
