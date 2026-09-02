@@ -9,8 +9,7 @@
       "Bash(git add:*)"
     ]
   },
-  "model": "claude-fable-5[1m]",
-  "outputStyle": "Concise",
+  "model": "claude-fable-5-1",
   "hooks": {
     "SessionStart": [
       {
@@ -37,8 +36,8 @@
     "mcp-server-dev@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
     "commit-commands@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true,
-    "sci-brain@sci-brain": true
+    "superpowers@claude-plugins-official": false,
+    "sci-brain@sci-brain": false
   },
   "extraKnownMarketplaces": {
     "agentic-audit": {
@@ -72,6 +71,7 @@
       }
     }
   },
+  "outputStyle": "Concise",
   "effortLevel": "xhigh",
   "autoCompactWindow": 400000,
   "tui": "fullscreen",
