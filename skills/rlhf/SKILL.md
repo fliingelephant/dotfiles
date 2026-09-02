@@ -1,6 +1,6 @@
 ---
 name: rlhf
-description: Use when composing a reusable artifact — a skill, template, prompt, recurring format — whose open questions are the user's taste, intent, or needs rather than anything machine-checkable; or when editing one and the signals say it matters: the user shows they care and you feel real uncertainty, or the user already rejected a version once — or whenever the user explicitly calls a round on an artifact they deem important.
+description: Use when creating or editing a reusable artifact and material choices depend on the user's intent, taste, or preferences rather than a verifiable answer, especially when the user is uncertain, dissatisfied, or asks for careful iteration.
 ---
 
 # RLHF
@@ -46,7 +46,19 @@ user picks one, rejects both, or marks up — fold it back. After a fold, show
 the updated part at candidate size — never the whole file — for confirm. Then
 loop: to the next part that needs a round, or the same part again if the user
 is unsatisfied. One pair per round; a rejection's reason seeds the next pair.
-Done when every part stands accepted without markup.
+Before treating a modified artifact as done, run the final confirmation below.
+
+## Final Confirmation
+
+For a modification to an existing text artifact, show a unified diff between
+the original version and the proposed final version. Include only changed
+passages with enough context to understand each change.
+
+Wait for explicit confirmation before treating the modification as final or
+applying it to the source.
+
+This step applies only to modification tasks. For a non-text modification,
+show the original and proposed final versions together instead.
 
 Everything shown to the user — candidates, diffs, axes, folds — follows
 ASD-STE100 Simplified Technical English: short sentences, active voice, one
