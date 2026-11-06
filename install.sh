@@ -3,7 +3,7 @@
 set -e
 root=$(cd "$(dirname "$0")" && pwd)
 
-mkdir -p ~/.claude/skills ~/.agents/skills ~/.codex
+mkdir -p ~/.claude/skills ~/.agents/skills ~/.codex/skills
 
 # 1. One instruction file for both runtimes.
 ln -sfn "$root/AGENTS.md" ~/.claude/CLAUDE.md
@@ -22,5 +22,5 @@ done
 
 # 4. Codex-only skills.
 for s in "$root"/codex/skills/*/; do
-  ln -sfn "${s%/}" ~/.agents/skills/"$(basename "$s")"
+  ln -sfn "${s%/}" ~/.codex/skills/"$(basename "$s")"
 done
